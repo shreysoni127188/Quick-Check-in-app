@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "185760450834",
+    "firebase_url": "https://self-check-in-app.firebaseio.com",
+    "project_id": "self-check-in-app",
+    "storage_bucket": "self-check-in-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185760450834:android:663640260c4f0f38898bcb",
+        "android_client_info": {
+          "package_name": "com.example.self_check_in_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "185760450834-9ekrqk1gu2ubfs0qcmed8etokj7lsjgi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWbq-qcr82HaH5ZEvgXtAs3MbOOLfZO4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "185760450834-9ekrqk1gu2ubfs0qcmed8etokj7lsjgi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

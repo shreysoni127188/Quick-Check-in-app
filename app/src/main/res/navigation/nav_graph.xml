@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashscreen">
+    <fragment
+        android:id="@+id/loginscreen"
+        android:name="com.example.self_check_in_app.Loginscreen"
+        android:label="fragment_loginscreen"
+        tools:layout="@layout/fragment_loginscreen">
+        <action
+            android:id="@+id/action_loginscreen_to_signUpscreen"
+            app:destination="@id/signUpscreen" />
+        <action
+            android:id="@+id/action_loginscreen_to_mainpage"
+            app:destination="@id/mainpage"
+            app:popUpTo="@id/nav_graph" />
+        <action
+            android:id="@+id/action_loginscreen_to_emailverify"
+            app:destination="@id/emailverify" />
+        <action
+            android:id="@+id/action_loginscreen_to_forgetPassword"
+            app:destination="@id/forgetPassword"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpscreen"
+        android:name="com.example.self_check_in_app.SignUpscreen"
+        android:label="fragment_sign_upscreen"
+        tools:layout="@layout/fragment_sign_upscreen" >
+        <action
+            android:id="@+id/action_signUpscreen_to_emailverify"
+            app:destination="@id/emailverify"
+            app:popUpTo="@id/signUpscreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainpage"
+        android:name="com.example.self_check_in_app.Mainpage"
+        android:label="fragment_mainpage"
+        tools:layout="@layout/fragment_mainpage" >
+        <action
+            android:id="@+id/action_mainpage_to_loginscreen"
+            app:destination="@id/loginscreen"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_mainpage_to_customer_booking_details"
+            app:destination="@id/customer_booking_details"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailverify"
+        android:name="com.example.self_check_in_app.Emailverify"
+        android:label="fragment_emailverify"
+        tools:layout="@layout/fragment_emailverify" >
+        <argument
+            android:name="Email_id"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_emailverify_to_loginscreen"
+            app:destination="@id/loginscreen"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginscreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPassword"
+        android:name="com.example.self_check_in_app.ForgetPassword"
+        android:label="fragment_forget_password"
+        tools:layout="@layout/fragment_forget_password" >
+        <action
+            android:id="@+id/action_forgetPassword_to_loginscreen"
+            app:destination="@id/loginscreen"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginscreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/customer_booking_details"
+        android:name="com.example.self_check_in_app.Customer_booking_details"
+        android:label="fragment_customer_booking_details"
+        tools:layout="@layout/fragment_customer_booking_details" >
+        <argument
+            android:name="Booking_id"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_customer_booking_details_to_verifydocument"
+            app:destination="@id/verifydocument"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifydocument"
+        android:name="com.example.self_check_in_app.Verifydocument"
+        android:label="fragment_verifydocument"
+        tools:layout="@layout/fragment_verifydocument" >
+        <argument
+            android:name="Booking_id"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="RoomType"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="No_of_guest"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_verifydocument_to_check_in"
+            app:destination="@id/check_in"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/mainpage"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/check_in"
+        android:name="com.example.self_check_in_app.Check_in"
+        android:label="fragment_check_in"
+        tools:layout="@layout/fragment_check_in" >
+        <argument
+            android:name="RoomNo"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="FloorNo"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_check_in_to_loginscreen"
+            app:destination="@id/loginscreen"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_check_in_to_mainpage"
+            app:destination="@id/mainpage"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashscreen"
+        android:name="com.example.self_check_in_app.Splashscreen"
+        android:label="fragment_splashscreen"
+        tools:layout="@layout/fragment_splashscreen" >
+        <action
+            android:id="@+id/action_splashscreen_to_loginscreen"
+            app:destination="@id/loginscreen"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashscreen_to_mainpage"
+            app:destination="@id/mainpage"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

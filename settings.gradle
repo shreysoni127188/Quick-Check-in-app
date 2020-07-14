@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "Self_check_in_app"

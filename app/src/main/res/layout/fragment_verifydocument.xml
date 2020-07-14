@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Verifydocument">
+
+
+    <Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:title="@string/verify_document"
+        android:titleTextColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="TODO"
+        android:src="@mipmap/group41_4x"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/ubuntu"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:text="@string/please_upload_identity_proof_passport_aadhar_card"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/userimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <ImageView
+        android:id="@+id/userimage"
+        android:layout_width="350dp"
+        android:layout_height="158dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:srcCompat="@mipmap/noimage"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/Click_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/login_btn_corner_radius"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/click_image"
+        app:layout_constraintBottom_toBottomOf="@+id/Upload_Btn"
+        app:layout_constraintStart_toStartOf="@+id/userimage"
+        app:layout_constraintTop_toBottomOf="@+id/userimage"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/Upload_Btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/login_btn_corner_radius"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/upload_image"
+        app:layout_constraintEnd_toEndOf="@+id/userimage"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Click_btn"
+        app:layout_constraintTop_toBottomOf="@+id/userimage" />
+
+    <TextView
+        android:id="@+id/ProvideSignature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="9dp"
+        android:fontFamily="@font/ubuntu"
+        android:text="@string/please_provide_your_sognature_below"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/signaturePad2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Click_btn" />
+
+    <com.github.gcacace.signaturepad.views.SignaturePad
+        android:id="@+id/signaturePad2"
+        android:layout_width="307dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#74A39D9D"
+        app:layout_constraintBottom_toTopOf="@+id/Check_in_verify_document"
+        app:layout_constraintEnd_toEndOf="@+id/ProvideSignature"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/ProvideSignature"
+        app:layout_constraintTop_toBottomOf="@+id/ProvideSignature" />
+
+    <Button
+        android:id="@+id/Clear_Sign"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:background="@drawable/login_btn_corner_radius"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/clear_sign"
+        app:layout_constraintBottom_toBottomOf="@+id/Check_in_verify_document"
+        app:layout_constraintEnd_toStartOf="@+id/Check_in_verify_document"
+        app:layout_constraintStart_toStartOf="@+id/signaturePad2"
+        app:layout_constraintTop_toBottomOf="@+id/signaturePad2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/Check_in_verify_document"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/login_btn_corner_radius"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/check_in"
+        app:layout_constraintEnd_toEndOf="@+id/signaturePad2"
+        app:layout_constraintStart_toEndOf="@+id/Clear_Sign"
+        app:layout_constraintTop_toBottomOf="@+id/signaturePad2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

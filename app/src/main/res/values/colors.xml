@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" >
+    <color name="colorPrimary">#2356DA</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#DD2C00</color>
+    <color name="email_btn">#979797</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/colorPrimary</color>
+    <color name="signup_btn">#FFFFFF</color>
+</resources>
