@@ -5,14 +5,5 @@ Read the following instructions before installing apk.
   3.Signup with valid email-id.
   4.Before testing the app please let me know email-id from which u login as i have add  in the database.
 
-Here are some test booking-id  :
-  1.111111
-  2.123321
-  3.123456
-  4.144144
-  5.155155
-  6.188188
-  7.222222
-  8.555555
-  9.999999
+Here are some test booking-id 111111,123321,123456,144144,155155,188188,222222,555555,999999
 
